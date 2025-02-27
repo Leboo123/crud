@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%block content %}
+<h1>Student list</h1>
+<p>Student at emobilis</p>
+
+<table class="table table-striped table-bordered table-warning">
+<thead class="table-dark">
+   <th>First name</th>
+   <th>Last name</th>
+   <th>AGE</th>
+   <th></th>
+
+</thead>
+<tbody>
+    {% for x in student %}
+        <tr>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+            <td>{{ x.age }}</td>
+        <td>
+            <button class="btn btn-success">Edit</button>
+              <button class="btn btn-danger">Delete</button>
+        </td>
+
+        </tr>
+
+    {% endfor %}
+ </tbody>
+    </table>
+{% endblock %}
